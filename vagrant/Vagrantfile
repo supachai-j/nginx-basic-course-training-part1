@@ -1,0 +1,21 @@
+Vagrant.configure("2") do |config|
+  
+    config.vm.define "nginx-oss-01" do |target1|
+      target1.vm.hostname = "nginx-oss01"
+      target1.vm.box = "bento/ubuntu-18.04"
+      target1.vm.network "private_network", ip: "192.168.55.41"
+    end
+
+    config.vm.define "nginx-plus-02" do |target2|
+      target2.vm.hostname = "nginx-plus02"
+      target2.vm.box = "bento/ubuntu-18.04"
+      target2.vm.network "private_network", ip: "192.168.55.42"
+    end
+
+    config.vm.provider "virtualbox" do |v|
+        v.gui = false
+        v.memory = 1024
+        v.cpus = 2
+      end
+
+  end
