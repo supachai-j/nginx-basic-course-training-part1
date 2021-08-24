@@ -1,6 +1,6 @@
 # NGINX Basic Course Training Part 1
 
-## What is covered in this Tutorial
+## เนื้อหาเกี่ยวกับ
 - Installation NGINX
 - Configure NGINX as Web Server
 - Configure NGINX as Reverse Proxy
