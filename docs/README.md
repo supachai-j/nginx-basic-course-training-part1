@@ -11,6 +11,15 @@ Refer Step: https://docs.nginx.com/nginx/admin-guide/installing-nginx/installing
 deb [arch=amd64] https://nginx.org/packages/mainline/ubuntu/ bionic nginx
 deb-src https://nginx.org/packages/mainline/ubuntu/ bionic nginx
 ```
+```
+## For NGINX Plus Repo.
+$ printf "deb [arch=amd64] https://pkgs.nginx.com/plus/ubuntu `lsb_release -cs` nginx-plus\n" | sudo tee /etc/apt/sources.list.d/nginx-plus.list
+
+## For NGINX App Protect Repo.
+$ printf "deb [arch=amd64] https://pkgs.nginx.com/app-protect/debian `lsb_release -cs` nginx-plus\n" | sudo tee /etc/apt/sources.list.d/nginx-app-protect.list
+
+$ printf "deb [arch=amd64] https://pkgs.nginx.com/app-protect-security-updates/debian `lsb_release -cs` nginx-plus\n" | sudo tee -a /etc/apt/sources.list.d/nginx-app-protect.list
+```
 
 ```
 $ sudo systemctl enable nginx --now
